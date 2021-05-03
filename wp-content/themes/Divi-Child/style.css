@@ -1,0 +1,100 @@
+/*
+ Theme Name:   Divi-Child
+ Description:  Divi Child Theme
+ Author:       Saeeda
+ Template:     Divi
+ Version:      1.0.0
+*/
+
+/*** BREADCRUMBS ***/
+.woocommerce .woocommerce-breadcrumb {
+	font-size: 16px;
+	font-weight: bold;
+	color: #222;
+}
+/*** BREADCRUMB LINKS ***/
+.woocommerce .woocommerce-breadcrumb a {
+	color: #00707a;
+}
+/*** CHANGE COLORS ON THE FILTER DROPDOWN (THIS MAKES OTHER WOO DROPDOWNS MATCH AS WELL) ***/
+select.orderby, /* woocommerce class is purposely left off so other dropdowns can match but you can add it if you prefer */
+.woocommerce div.product form.cart .variations td select {
+	background: #00707a;
+	color: #fff !important;
+	font-weight: bold;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+/*** SINGLE GRID ITEM STYLING ***/
+.woocommerce ul.products li.product {
+	text-align: center; /* centers titles and prices */
+	background: #f5f5f5; /* changes background color */
+	padding: 1em; /* adds space around entire product */
+	transition: all 0.2s;
+	-moz-transition: all 0.2s; 
+	-webkit-transition: all 0.2s; 
+}
+.woocommerce ul.products li.product:hover {
+	background: #fff; /* changes background color on hover */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* adds shadow on hover */
+	-webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); 
+	-moz-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+/*** MAKE IMAGES TOUCH EDGES (IF ADDING PADDING ABOVE) ***/
+.et_shop_image {
+	margin: -1em -1em 0; /* compensates for grid item padding, leave this off if you want space around the images */
+}
+/*** MAKE TITLES BIGGER AND CHANGE COLOR ON SINGLE GRID AND RELATED PRODUCTS ***/
+h2.woocommerce-loop-product__title,
+.product .related h2 {
+	font-size: 22px !important;
+	color: #000; /* change color of product titles */
+}
+/*** CENTER STAR RATING AND MAKE STARS BIGGER ***/
+.woocommerce ul.products li.product .star-rating {
+	font-size: 18px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+/*** CHANGE STAR COLOR FROM THEME COLOR ***/
+.woocommerce .star-rating span::before {
+	color: #ffa500 !important;
+}
+/*** CHANGE PRICE COLOR IF YOU DON'T WANT IT DEFAULT THEME COLOR ***/
+span.woocommerce-Price-amount.amount {
+	color: red; /* this changes price color on all Woo areas */
+}
+/*** MAKE PRICES BIGGER ON GRID AND RELATED PRODUCTS ***/
+.woocommerce ul.products li.product .price, 
+.woocommerce ul.products li.product .price del, 
+.woocommerce-page ul.products li.product .price, 
+.woocommerce-page ul.products li.product .price del {
+	font-size: 18px;
+}
+/*** IMAGE OVERLAY BACKGROUND ***/
+.woocommerce .et_overlay {
+	border: 0;
+	background: #00707a; /* For browsers that do not support gradients */
+    background: radial-gradient(rgba(0,173,173,1), rgba(0,112,122,0.8)); /* gradient colors */
+}
+/*** IMAGE OVERLAY ICON COLOR AND SIZE ***/
+.woocommerce .et_overlay:before {
+	color: #fff;
+	font-size: 60px;
+	margin: auto;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+/*** SALE BADGE COLOR ***/
+.woocommerce span.onsale, 
+.woocommerce-page span.onsale {
+	background: #FFA500 !important;
+	z-index: 9;
+}
+.woocommerce-LoopProduct-link woocommerce-loop-product__link.woocommerce ul.products li.product a img{
+    height: 250px !important;
+}
+
+
+
+
